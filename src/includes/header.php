@@ -25,25 +25,28 @@ $pageTitle = $pageTitle ?? "Student Registration System";
     <div class="header-container">
 
         <h2>Student Registration System</h2>
-<nav>
 
-    <?php if (isset($_SESSION['admin_id'])): ?>
+        <nav>
 
-        <a href="register.php">Register Student</a>
-        <a href="students.php">Manage Students</a>
-        <a href="logout.php">Logout</a>
+            <?php if (isset($_SESSION['admin_id'])): ?>
 
-    <?php else: ?>
+                <a href="register.php">Register Student</a>
+                <a href="students.php">Manage Students</a>
+                <a href="admin/manage-files.php">Manage Files</a>
+                <a href="logout.php">Logout</a>
 
-        <a href="index.php">Dashboard</a>
-        <a href="register.php">Register as Student</a>
-        <a href="admin-login.php">Admin Login</a>
+            <?php else: ?>
 
-    <?php endif; ?>
+                <a href="index.php">Dashboard</a>
+                <a href="register.php">Register as Student</a>
+                <a href="downloads.php">Downloads</a>
+                <a href="admin-login.php">Admin Login</a>
 
-</nav>
+            <?php endif; ?>
 
-           </div>
+        </nav>
+
+    </div>
 
 </header>
 

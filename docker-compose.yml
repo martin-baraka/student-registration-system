@@ -28,6 +28,7 @@ services:
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
     volumes:
       - ./src:/var/www/html
+      - ./storage/uploads:/var/www/uploads
     depends_on:
       db:
         condition: service_healthy
@@ -71,7 +72,7 @@ services:
     networks:
       - student_network
 
-# Persistent Database Storage
+# Persistent Storage
 volumes:
   mysql_data:
 
